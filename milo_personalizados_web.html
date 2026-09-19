@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Milo Personalizados — tejidos hechos a mano, amigurumis, mantas de apego, sonajeros, porta chupetes y regalos personalizados.">
+<title>Milo Personalizados | Pequeños tejidos, grandes momentos</title>
+<style>
+:root{
+  --cream:#fbf7ef; --cream2:#f3eadc; --sage:#a8b99d; --sage-dark:#66785d;
+  --brown:#6d5948; --text:#40382f; --white:#fffdf9; --rose:#c99d92;
+  --shadow:0 12px 35px rgba(75,58,43,.10); --radius:24px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eadfce}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;font-size:29px;font-weight:700;color:var(--brown)}
+.logo span{display:block;font:12px Arial;letter-spacing:3px;text-transform:uppercase;color:var(--sage-dark);margin-top:-5px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--sage-dark)}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 22px;background:var(--sage-dark);color:white;font-weight:700;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);opacity:.92}
+.btn.alt{background:var(--brown)}
+.hero{padding:75px 0 65px;background:radial-gradient(circle at 85% 20%,#e4eadc 0 15%,transparent 35%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--sage-dark);font-size:12px;font-weight:800}
+h1{font:700 clamp(46px,7vw,78px)/.98 Georgia,serif;color:var(--brown);margin:15px 0 22px}
+.hero p{font-size:19px;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-card{min-height:430px;border-radius:42px;background:linear-gradient(145deg,#dbe4d2,#f1dfd7);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:var(--shadow);overflow:hidden}
+.yarn{font-size:150px;filter:drop-shadow(0 15px 12px rgba(0,0,0,.12))}
+.hero-card:after{content:"HECHO A MANO";position:absolute;bottom:25px;right:25px;background:rgba(255,255,255,.78);padding:8px 14px;border-radius:999px;font-size:11px;letter-spacing:2px;font-weight:800}
+section{padding:75px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 38px}
+.section-head h2{font:700 42px Georgia,serif;color:var(--brown);margin:8px 0}
+.section-head p{margin:0;color:#74695d}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--white);border:1px solid #eadfce;border-radius:var(--radius);padding:22px;box-shadow:0 6px 20px rgba(75,58,43,.05)}
+.product-image{height:190px;border-radius:18px;background:linear-gradient(145deg,#e4eadc,#f2e0d8);display:flex;align-items:center;justify-content:center;font-size:75px;margin-bottom:17px}
+.card h3{margin:4px 0 6px;font:700 23px Georgia,serif;color:var(--brown)}
+.price{font-weight:800;color:var(--sage-dark);margin:10px 0}
+.card .btn{width:100%;text-align:center;padding:11px}
+.personal{background:var(--sage-dark);color:white}
+.personal .section-head h2,.personal .section-head p{color:white}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.step{text-align:center;background:var(--white);border-radius:20px;padding:25px 14px;border:1px solid #eadfce}
+.num{width:42px;height:42px;border-radius:50%;background:var(--sage);color:white;display:grid;place-items:center;margin:0 auto 12px;font-weight:800}
+.step h3{font-size:16px;margin:8px 0}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.story-art{min-height:350px;border-radius:35px;background:linear-gradient(135deg,#f0ded7,#e0e8d9);display:grid;place-items:center;font-size:120px}
+.story h2{font:700 42px Georgia,serif;color:var(--brown);margin:0 0 15px}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{background:var(--white);padding:25px;border-radius:20px;border:1px solid #eadfce}
+.stars{letter-spacing:3px;color:#b68d35}
+.faq{max-width:800px;margin:auto}
+details{background:var(--white);border:1px solid #eadfce;border-radius:15px;padding:17px 20px;margin:10px 0}
+summary{font-weight:700;cursor:pointer}
+.contact{background:#f0e3d7}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.contact h2{font:700 42px Georgia,serif;color:var(--brown);margin:0}
+form{background:var(--white);padding:28px;border-radius:25px;box-shadow:var(--shadow)}
+label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #dfd2c1;border-radius:12px;background:#fffefa;font:inherit}
+textarea{min-height:90px;resize:vertical}
+footer{background:var(--brown);color:#f8f1e7;padding:40px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.small{font-size:13px;opacity:.8}
+.mobile-menu{display:none}
+@media(max-width:850px){
+ nav{display:none}.mobile-menu{display:block}
+ .hero-grid,.story,.contact-box{grid-template-columns:1fr}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:1fr 1fr}
+ .hero{padding-top:50px}
+}
+@media(max-width:520px){
+ section{padding:55px 0}.grid,.testimonials,.steps{grid-template-columns:1fr}
+ .hero-card{min-height:300px}.yarn{font-size:110px}
+ h1{font-size:50px}.section-head h2,.story h2,.contact h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">Milo <span>Personalizados</span></a>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#personaliza">Personalizá</a>
+      <a href="#como">Cómo trabajamos</a>
+      <a href="#historia">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn" href="#contacto">Hacer pedido</a>
+    <button class="mobile-menu btn" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Artesanal · Único · Hecho con amor</div>
+   <h1>Pequeños tejidos,<br>grandes momentos.</h1>
+   <p>En <strong>Milo Personalizados</strong> creamos amigurumis, accesorios y regalos tejidos a mano, pensados especialmente para cada persona.</p>
+   <div class="actions">
+    <a class="btn" href="#productos">Ver productos</a>
+    <a class="btn alt" href="#personaliza">Crear mi Milo</a>
+   </div>
+  </div>
+  <div class="hero-card"><div class="yarn">🧶</div></div>
+ </div>
+</section>
+
+<section id="productos">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">Nuestra colección</div>
+   <h2>Elegí tu favorito</h2>
+   <p>Encontrá un detalle especial o inspirate para crear uno completamente personalizado.</p>
+  </div>
+  <div class="grid">
+   <article class="card"><div class="product-image">🧸</div><h3>Amigurumis</h3><p>Personajes y muñequitos tejidos para regalar y atesorar.</p><div class="price">Desde $____</div><a class="btn" href="#contacto">Quiero uno</a></article>
+   <article class="card"><div class="product-image">👶</div><h3>Mantas de apego</h3><p>Suaves compañeras para los primeros momentos del bebé.</p><div class="price">Desde $____</div><a class="btn" href="#contacto">Quiero una</a></article>
+   <article class="card"><div class="product-image">🌈</div><h3>Sonajeros</h3><p>Detalles tiernos y tejidos a mano para los más pequeños.</p><div class="price">Desde $____</div><a class="btn" href="#contacto">Quiero uno</a></article>
+   <article class="card"><div class="product-image">🔑</div><h3>Llaveros</h3><p>Pequeños regalos personalizados para llevar siempre.</p><div class="price">Desde $____</div><a class="btn" href="#contacto">Quiero uno</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="personal" id="personaliza">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">Tu idea + nuestras manos</div>
+   <h2>Vos lo imaginás. Nosotros lo tejemos.</h2>
+   <p>Elegí modelo, colores, nombre y detalles. Creamos una pieza especialmente para vos.</p>
+  </div>
+  <div style="text-align:center"><a class="btn alt" href="#contacto">Quiero personalizarlo</a></div>
+ </div>
+</section>
+
+<section id="como">
+ <div class="container">
+  <div class="section-head"><div class="eyebrow">Simple y transparente</div><h2>Así trabajamos</h2><p>Queremos que pedir tu Milo sea fácil y claro.</p></div>
+  <div class="steps">
+   <div class="step"><div class="num">1</div><h3>Elegís</h3><p>Seleccionás el producto que te gusta.</p></div>
+   <div class="step"><div class="num">2</div><h3>Personalizás</h3><p>Colores, nombre y detalles.</p></div>
+   <div class="step"><div class="num">3</div><h3>Confirmamos</h3><p>Te enviamos el presupuesto y condiciones.</p></div>
+   <div class="step"><div class="num">4</div><h3>Tejemos</h3><p>Comenzamos a crear tu pedido.</p></div>
+   <div class="step"><div class="num">5</div><h3>Recibís</h3><p>Lo preparamos para que llegue listo para regalar.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="historia">
+ <div class="container story">
+  <div class="story-art">🧶✨</div>
+  <div>
+   <div class="eyebrow">La historia de Milo</div>
+   <h2>Hecho a mano, puntada por puntada.</h2>
+   <p>En Milo Personalizados creemos que un regalo artesanal tiene algo diferente. Cada pieza lleva tiempo, dedicación y cariño.</p>
+   <p>No hacemos solamente tejidos: creamos pequeños recuerdos para acompañar grandes momentos.</p>
+   <strong>Gracias por elegir lo artesanal. Gracias por elegir Milo. 💕</strong>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="section-head"><div class="eyebrow">Experiencias reales</div><h2>Milos que ya encontraron su hogar</h2><p>Reemplazá estos ejemplos por fotos y reseñas reales de tus clientes.</p></div>
+  <div class="testimonials">
+   <div class="quote"><div class="stars">★★★★★</div><p>“Quedó hermoso y la atención fue excelente. Mi hija quedó enamorada.”</p><small>— Cliente Milo</small></div>
+   <div class="quote"><div class="stars">★★★★★</div><p>“El regalo fue precioso y se notó todo el trabajo artesanal.”</p><small>— Cliente Milo</small></div>
+   <div class="quote"><div class="stars">★★★★★</div><p>“Pudimos elegir los colores y quedó exactamente como lo imaginábamos.”</p><small>— Cliente Milo</small></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container faq">
+  <div class="section-head"><div class="eyebrow">Antes de comprar</div><h2>Preguntas frecuentes</h2></div>
+  <details><summary>¿Cuánto demora un pedido?</summary><p>El tiempo depende del producto y la cantidad. Informamos el plazo estimado antes de confirmar el pedido.</p></details>
+  <details><summary>¿Puedo elegir los colores?</summary><p>Sí. Los productos personalizables permiten elegir colores y otros detalles según el diseño.</p></details>
+  <details><summary>¿Cómo se confirma el pedido?</summary><p>Una vez acordados producto, personalización, precio, plazo y forma de pago, se confirma según las condiciones informadas por Milo.</p></details>
+  <details><summary>¿Hacen envíos?</summary><p>Completá aquí las localidades y medios de envío que realmente ofrecés.</p></details>
+ </div>
+</section>
+
+<section class="contact" id="contacto">
+ <div class="container contact-box">
+  <div>
+   <div class="eyebrow">Hablemos de tu idea</div>
+   <h2>¿Qué Milo querés crear?</h2>
+   <p>Completá el formulario y prepararemos tu consulta para enviarla por WhatsApp.</p>
+   <p><strong>📱 WhatsApp:</strong> +54 9 XX XXXX XXXX<br><strong>📸 Instagram:</strong> @milopersonalizados</p>
+  </div>
+  <form onsubmit="sendWhatsApp(event)">
+   <label>¿Qué producto querés?</label>
+   <select id="producto">
+    <option>Amigurumi</option><option>Manta de apego</option><option>Sonajero</option><option>Porta chupete</option><option>Llavero</option><option>Otro personalizado</option>
+   </select>
+   <label>Nombre</label><input id="nombre" required placeholder="Tu nombre">
+   <label>¿Cómo te gustaría personalizarlo?</label><textarea id="detalle" placeholder="Colores, nombre, cantidad, fecha, etc."></textarea>
+   <label>¿Para cuándo lo necesitás?</label><input id="fecha" type="date">
+   <button class="btn" style="width:100%;margin-top:15px" type="submit">Enviar pedido por WhatsApp 💬</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-grid">
+  <div><div class="logo" style="color:#fff">Milo <span style="color:#dbe4d2">Personalizados</span></div><p>Pequeños tejidos, grandes momentos.</p></div>
+  <div><strong>Seguinos</strong><p>Instagram · WhatsApp · TikTok</p></div>
+  <div class="small">© 2026 Milo Personalizados · Hecho a mano con amor.</div>
+ </div>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const phone="549XXXXXXXXXX"; // REEMPLAZAR por tu número de WhatsApp, sin + ni espacios
+ const producto=document.getElementById('producto').value;
+ const nombre=document.getElementById('nombre').value;
+ const detalle=document.getElementById('detalle').value;
+ const fecha=document.getElementById('fecha').value;
+ const msg=`Hola Milo Personalizados 💕%0A%0AQuiero consultar por:%20${encodeURIComponent(producto)}%0ANombre:%20${encodeURIComponent(nombre)}%0APersonalización:%20${encodeURIComponent(detalle||'Sin detalles todavía')}%0AFecha que necesito:%20${encodeURIComponent(fecha||'A confirmar')}`;
+ window.open(`https://wa.me/${phone}?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
